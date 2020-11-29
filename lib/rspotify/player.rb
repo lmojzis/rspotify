@@ -12,8 +12,8 @@ module RSpotify
       @context_type           = options.dig('context', 'type')
       @context_uri            = options.dig('context', 'uri')
 
-      @track = if options['track']
-        Track.new options['track']
+      @track = if options['item']
+        Track.new options['item']
       end
 
       @device = if options['device']
