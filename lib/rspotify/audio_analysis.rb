@@ -13,9 +13,9 @@ module RSpotify
     # @return [AudioAnalysis, Array<AudioAnalysis>]
     #
     # @example
-    #           audio_features = RSpotify::AudioAnalysis.find('1zHlj4dQ8ZAtrayhuDDmkY')
+    #           audio_analysis = RSpotify::AudioAnalysis.find('1zHlj4dQ8ZAtrayhuDDmkY')
     def self.find(id)
-      url = "audio-features/#{id}"
+      url = "audio-analysis/#{id}"
       response = RSpotify.get(url)
       return response if RSpotify.raw_response
 
